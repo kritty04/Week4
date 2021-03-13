@@ -54,8 +54,8 @@ all: main-build
 main-build: Week4.elf secondary-outputs
 
 # Tool invocations
-Week4.elf: $(OBJS) $(USER_OBJS) C:\Git\Week4\STM32F411RETX_FLASH.ld
-	arm-none-eabi-gcc -o "Week4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Git\Week4\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Week4.elf: $(OBJS) $(USER_OBJS) D:\Git\Week4\STM32F411RETX_FLASH.ld
+	arm-none-eabi-gcc -o "Week4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Git\Week4\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
