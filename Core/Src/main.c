@@ -114,7 +114,7 @@ HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
 		case 10 :
 				if (HAL_GetTick()>=Timestamp+timeplus)
 					{
-						HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+						HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, 1);
 						Timestamp2=HAL_GetTick();
 						Mode=1;
 		        	}
